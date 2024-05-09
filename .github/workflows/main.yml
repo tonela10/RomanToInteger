@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm test test.js
+        run: npm test 
 
       - name: Lint code
         run: npm run lint /home/runner/work/RomanToInteger/package.json
