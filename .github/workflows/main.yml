@@ -22,10 +22,10 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm /home/runner/work/RomanToInteger/test.js
+        run: npm test /home/runner/work/RomanToInteger/test.js
 
       - name: Lint code
-        run: npm run /home/runner/work/RomanToInteger/package.json
+        run: npm run lint /home/runner/work/RomanToInteger/package.json
 
       - name: Deploy to GitHub Pages
         if: success()
