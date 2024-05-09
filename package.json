@@ -4,6 +4,11 @@
     "qunit": "^2.20.1"
   },
   "scripts": {
-    "lint": "eslint ."
-  }
+  "lint": "eslint .",
+  "test": "test.js"
 }
+
+
+
+}
+
