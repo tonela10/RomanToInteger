@@ -4,7 +4,11 @@
   },
   "scripts": {
   "lint": "eslint ."
+},
+  "scripts": {
+  "test": "test.js"
 }
+
 
 }
 
