@@ -1,13 +1,10 @@
 {
     "devDependencies": {
-      "eslint": "^9.2.0",
-      "qunit": "^2.20.1"
+        "eslint": "^9.2.0",
+        "qunit": "^2.20.1"
     },
     "scripts": {
-    "lint": "eslint .",
-    "test": "npm test"
-  }
-  
-  
-  
-  }
+        "lint": "eslint .",
+        "test": "npm test"
+    }
+}
