@@ -2,7 +2,7 @@ QUnit.test('convertIntegerToRoman Test Cases', function(assert) {
   // Test Cases for convertIntegerToRoman
   
   // TC-1
-  assert.equal(convertIntegerToRoman(1), {value: 'I', message: '', result: true}, 'TC-1');
+  assert.equal(convertIntegerToRoman('1'), {value: 'I', message: '', result: true}, 'TC-1');
   
   // TC-2
   assert.propEqual(convertIntegerToRoman(3999), {value: 'MMMCMXCIX', message: '', result: true}, 'TC-2');
