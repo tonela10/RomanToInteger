@@ -34,7 +34,7 @@ function init() {
       alert(conversion.message);
     }
   });
-};
+}
 
 // Conversion method for Roman to Integer
 const convertRomanToInteger = (roman) => {
@@ -42,7 +42,7 @@ const convertRomanToInteger = (roman) => {
     value: 0, 
     message: '',
     result: false 
-  }
+  };
 
   // Regexp to check if a string is a valid roman number
   const romanNumeralRegex = new RegExp(
@@ -94,7 +94,7 @@ const convertIntegerToRoman = (num) => {
     value: '',
     message: '', 
     result: false 
-  }
+  };
 
   // Regexp to check the input is a valid integer
   const numberRegex = new RegExp(/^\d+$/);
