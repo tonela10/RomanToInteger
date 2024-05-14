@@ -82,7 +82,7 @@ const convertIntegerToRoman = (num) => {
   let str = '';
   const digits = String(num).split('').reverse();
   digits.forEach((digit, index) => {
-    str = digitToRoman(digit, 10 ** index, mapping) + str;
+    str = digitToRoman(digit, 10 * index, mapping) + str;
   });
 
   response.value = str;
