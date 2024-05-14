@@ -222,4 +222,3 @@ const greaterThan9 = (num, obj) => {
   }
 };
 
-export { convertIntegerToRoman, convertRomanToInteger };

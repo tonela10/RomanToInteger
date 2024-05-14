@@ -1,6 +1,4 @@
 
-import { convertIntegerToRoman, convertRomanToInteger } from './romans.js';
-
 test('convertIntegerToRoman Test Cases', function(assert) {
   // Test Cases for convertIntegerToRoman
   
