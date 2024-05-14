@@ -37,7 +37,7 @@ function init() {
     }
   });
 
-};
+}
 
 // Now the convertion methods receive both an input argument instead
 // of reading directly from the UI.
@@ -50,7 +50,7 @@ const convertRomanToInteger = (roman) => {
     value: 0,
     message: '',
     result: false
-  }
+  };
 
   // Regexp to check if a string is a valid roman number
   const romanNumeralRegex = new RegExp(
@@ -110,7 +110,7 @@ const convertIntegerToRoman = (num) => {
     value: 0,
     message: '',
     result: false
-  }
+  };
 
   // Regexp to check the input is a valid integer
   const numberRegex = new RegExp(/^\d+$/);
