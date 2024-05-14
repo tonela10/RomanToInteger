@@ -1,5 +1,4 @@
-
-test('convertIntegerToRoman Test Cases', function(assert) {
+QUnit.test('convertIntegerToRoman Test Cases', function(assert) {
   // Test Cases for convertIntegerToRoman
   
   // TC-1
@@ -21,7 +20,7 @@ test('convertIntegerToRoman Test Cases', function(assert) {
   assert.propEqual(convertIntegerToRoman(3.14), {value: 0, message: 'Please enter a valid integer', result: false}, 'TC-6');
 });
 
-test('convertRomanToInteger Test Cases', function(assert) {
+QUnit.test('convertRomanToInteger Test Cases', function(assert) {
   // Test Cases for convertRomanToInteger
   
   // TC-1
