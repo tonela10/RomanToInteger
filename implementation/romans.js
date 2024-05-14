@@ -5,13 +5,13 @@ const OUT_OF_RANGE = 'Out of range (1-3999)';
 
 function init() { 
   // Load elements once to avoid repetition on every invocation
-  var modeCheckbox = document.querySelector("input[type='checkbox']");
-  var header = document.querySelector("h1");
-  var convertButton = document.querySelector(".convert-button");
-  var outputArea = document.querySelector(".convert-output");
-  var inputArea = document.querySelector("input[type='text']");
+  var modeCheckbox = document.querySelector('input[type=',checkbox,']');
+  var header = document.querySelector('h1');
+  var convertButton = document.querySelector('.convert-button');
+  var outputArea = document.querySelector('.convert-output');
+  var inputArea = document.querySelector('input[type=',text,']');
 
-  modeCheckbox.addEventListener("change", (e) => {
+  modeCheckbox.addEventListener('change', (e) => {
     header.innerHTML = getModeTitle(e.target.checked);
   });
 
@@ -25,7 +25,7 @@ function init() {
   // 2 - Write the UI output (outputArea.innerHTML)
   // 3 - Show error messages
   // This is cleaner and also removes code duplications
-  convertButton.addEventListener("click", () => {
+  convertButton.addEventListener('click', () => {
     let inputValue = inputArea.value;
     let conversion = modeCheckbox.checked ? convertIntegerToRoman(inputValue) : convertRomanToInteger(inputValue);
     if (conversion.result) {
