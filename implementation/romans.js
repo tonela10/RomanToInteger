@@ -221,3 +221,5 @@ const greaterThan9 = (num, obj) => {
     return obj[1000].repeat(parseInt(num / 1000));
   }
 };
+
+export { convertIntegerToRoman, convertRomanToInteger };
