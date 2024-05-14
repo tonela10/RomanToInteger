@@ -1,9 +1,11 @@
+// romans.js
+
 // Constants for the literals
 const INVALID_ROMAN = 'Please enter a valid roman';
 const INVALID_INTEGER = 'Please enter a valid integer';
 const OUT_OF_RANGE = 'Out of range (1-3999)';
 
-function init() { 
+function init() {
   // Load elements once to avoid repetition on every invocation
   var modeCheckbox = document.querySelector('input[type="checkbox"]');
   var header = document.querySelector('h1');
@@ -19,8 +21,8 @@ function init() {
     return integerToRoman ? 'Integer To Roman' : 'Roman To Integer';
   };
 
-  // Now, the conversion operation only performs the operation.
-  // Extracted actions to this listener: 
+  // Now, the conversion operation does only perform the operation.
+  // Things we have extracted to this listener:
   // 1 - Read the UI inputs (inputArea.value)
   // 2 - Write the UI output (outputArea.innerHTML)
   // 3 - Show error messages
@@ -36,12 +38,16 @@ function init() {
   });
 }
 
-// Conversion method for Roman to Integer
+// Now the conversion methods receive both an input argument instead
+// of reading directly from the UI.
+// On top of that, they return a JSON object instead of updating the
+// UI directly. The JSON object contains the result (ok/nok), the value
+// and an error message if needed
 const convertRomanToInteger = (roman) => {
   let response = {
-    value: 0, 
+    value: 0,
     message: '',
-    result: false 
+    result: false
   };
 
   // Regexp to check if a string is a valid roman number
