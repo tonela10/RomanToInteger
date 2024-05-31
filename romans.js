@@ -12,7 +12,6 @@ function init() {
   var outputArea = document.querySelector('.convert-output');
   var inputArea = document.querySelector('input[type=\'text\']');
 
-
   modeCheckbox.addEventListener('change', function(e) {
     header.innerHTML = getModeTitle(e.target.checked);
   });
@@ -21,31 +20,36 @@ function init() {
     return integerToRoman ? 'Integer To Roman' : 'Roman To Integer';
   };
 
-  // Now, the convertion operation does only perform the operation. 
+  // Now, the conversion operation does only perform the operation. 
   // Things we have extracted to this listener: 
   // 1 - Read the UI inputs (inputArea.value)
   // 2 - Write the UI output (outputArea.innerHTML)
   // 3 - Show error messages
   // This is cleaner and also removes code duplications
   convertButton.addEventListener('click', function() {
+    // Google Analytics event tracking
+    gtag('event', 'click', {
+      'event_category': 'Button',
+      'event_label': 'Convert Button',
+      'value': inputArea.value
+    });
+
     var inputValue = inputArea.value;
-    var convertion = modeCheckbox.checked ? convertIntegerToRoman(inputValue) : convertRomanToInteger(inputValue);
-    if (convertion.result) {
-      outputArea.innerHTML = convertion.value;
+    var conversion = modeCheckbox.checked ? convertIntegerToRoman(inputValue) : convertRomanToInteger(inputValue);
+    if (conversion.result) {
+      outputArea.innerHTML = conversion.value;
     } else {
-      alert(convertion.message);
+      alert(conversion.message);
     }
   });
-
 }
 
-// Now the convertion methods receive both an input argument instead
+// Now the conversion methods receive both an input argument instead
 // of reading directly from the UI.
 // On top of that, they return a JSON object instead of updating the
 // UI directly. The JSON object contains the result (ok/nok), the value
 // and an error message if needed
 const convertRomanToInteger = function(roman) {
-
   var response = {
     value: 0, 
     message: '',
@@ -99,13 +103,12 @@ const convertRomanToInteger = function(roman) {
   return response;
 };
 
-// Now the convertion methods receive both an input argument instead
+// Now the conversion methods receive both an input argument instead
 // of reading directly from the UI.
 // On top of that, they return a JSON object instead of updating the
 // UI directly. The JSON object contains the result (ok/nok), the value
 // and an error message if needed
 const convertIntegerToRoman = function(num) {
-
   var response = {
     value: 0,
     message: '', 
