@@ -7,6 +7,9 @@ module.exports = {
     "parserOptions": {
         "sourceType": "module"
     },
+    "globlas":{
+        "gtag":"readonly"
+    },
     "rules": {
         "no-cond-assign": [
             "error",
